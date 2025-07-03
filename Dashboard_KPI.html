@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dashboard KPI</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    body {
+      background-color: #f0f8ff; /* ฟ้าอ่อน */
+      font-family: "Prompt", sans-serif;
+    }
+    .w3-bar.pink-bar {
+      background-color: #ff80ab !important; /* ชมพู */
+    }
+    .w3-bar.pink-bar .w3-button:hover {
+      background-color: #ffb3c6 !important;
+    }
+    .w3-panel.custom-box {
+      background-color: #fce4ec; /* ชมพูอ่อน */
+      border-left: 6px solid #f06292; /* ขอบชมพูเข้ม */
+    }
+    h2, h3 {
+      color: #ec407a; /* ชมพู */
+    }
+    .w3-table th {
+      background-color: #e3f2fd; /* หัวตารางฟ้า */
+    }
+    .city {
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="w3-content w3-card w3-round w3-white w3-padding city" id="1">
+  <span onclick="this.parentElement.style.display='none'"
+        class="w3-button w3-large w3-display-topright">&times;</span>
+    <div class="w3-panel custom-box w3-round">
+        <p class="w3-large" style="color: #ad1457; font-weight: 500; margin: 0;"></p>
+        <h2>📊 สรุปผลการรายงานตัวชี้วัด โรงพยาบาลนราธิวาสราชนครินทร์</h2>
+  </div>
+  <p><strong>ชื่อผู้ใช้งาน:</strong> นายคฑายุทธ์ คงถาวร</p></center>
+
+ <div class="w3-content" style="max-width:1200px;">
+  <div class="w3-bar w3-card-2 w3-round-large" style="display:flex; background-color:#ff80ab;">
+    <button class="w3-button w3-bar-item w3-hover-pink" style="flex:1;" onclick="openCity('1')">ภาพรวมตัวชี้วัด</button>
+    <button class="w3-button w3-bar-item w3-hover-pink" style="flex:1;" onclick="openCity('2')">รายการตัวชี้วัด</button>
+    <button class="w3-button w3-bar-item w3-hover-pink" style="flex:1;" onclick="openCity('3')">เพิ่ม-ลบ-แก้ไข ตัวชี้วัด</button>
+    <button class="w3-button w3-bar-item w3-hover-pink" style="flex:1;" onclick="openCity('4')">ตั้งค่า</button>
+    <button class="w3-button w3-bar-item w3-hover-pink" style="flex:1;" onclick="openCity('5')">ออกจากระบบ</button>
+  </div>
+</div>
+
+
+  <table class="w3-table w3-bordered w3-striped w3-card w3-round">
+    <tr>
+      <th>กลุ่มงาน</th>
+      <th>รายงานผลแล้ว</th>
+      <th>ความสมบูรณ์</th>
+    </tr>
+    <!-- ตัวอย่างข้อมูล 3 แถว -->
+    <tr>
+      <td>1.กลุ่มงาน IC</td>
+      <td><i class="fa fa-check-square-o" style="font-size:20px;color:green"></i></td>
+      <td><i class="fa fa-times-circle-o" style="font-size:20px;color:red"></i></td>  
+    </tr>
+    <tr>
+      <td>2.กลุ่มงาน ER</td>
+      <td><i class="fa fa-check-square-o" style="font-size:20px;color:green"></i></td>
+      <td><i class="fa fa-check-square-o" style="font-size:20px;color:green"></i></td>
+    </tr>
+    <tr>
+      <td>3.กลุ่มงาน IPD</td>
+      <td><i class="fa fa-check-square-o" style="font-size:20px;color:green"></i></td>
+      <td><i class="fa fa-times-circle-o" style="font-size:20px;color:red"></i></td>  
+    </tr>
+     <tr>
+       <td>4.กลุ่มงาน PCT</td>
+      <th> </th>
+      <th> </th>
+    </tr>
+    <tr>
+      <td>5.กลุ่มงาน LR</td>
+      <td><i class="fa fa-check-square-o" style="font-size:20px;color:rgb(49, 204, 11)"></i></td>
+      <td><i class="fa fa-times-circle-o" style="font-size:20px;color:red"></i></td>
+    </tr>
+    <tr>
+      <td>6.กลุ่มงาน OPD</td>
+      <td><i class="fa fa-check-square-o" style="font-size:20px;color:rgb(49, 204, 11)"></i></td>
+      <td><i class="fa fa-times-circle-o" style="font-size:20px;color:red"></i></td>
+    </tr>
+    <tr>
+      <td>7.กลุ่มงาน LAB</td>
+      <th> </th>
+      <th> </th>
+    </tr>
+    <tr>
+      <td>8.กลุ่มงาน PTC (ระบบยา)</td>
+      <td><i class="fa fa-check-square-o" style="font-size:20px;color:rgb(49, 204, 11)"></i></td>
+      <td><i class="fa fa-times-circle-o" style="font-size:20px;color:red"></i></td>
+    </tr>
+    <tr>
+     <td>9.กลุ่มงาน HRD</td>
+      <th> </th>
+      <th> </th>
+    </tr>
+    <tr>
+      <td>10.กลุ่มงาน ENV</td>
+      <th> </th>
+      <th> </th>
+    </tr>
+    <tr>
+      <td>11.กลุ่มงาน IM</td>
+      <td><i class="fa fa-check-square-o" style="font-size:20px;color:rgb(49, 204, 11)"></i></td>
+      <td><i class="fa fa-times-circle-o" style="font-size:20px;color:red"></i></td>
+    </tr>
+    <tr>
+     <td>12.กลุ่มงาน RM</td>
+      <td><i class="fa fa-check-square-o" style="font-size:20px;color:rgb(49, 204, 11)"></i></td>
+      <td><i class="fa fa-times-circle-o" style="font-size:20px;color:red"></i></td>
+    </tr>
+    <tr>
+      <td>13.กลุ่มงาน X-RAY</td>
+      <th> </th>
+      <th> </th>
+    </tr>
+    <tr>
+      <td>14.กลุ่มงานทีมนำโรงพยาบาล</td>
+      <th></th>
+      <th></th>
+    </tr>
+    <tr>
+      <td>15.กลุ่มงานเวชสถิติ</td>
+      <th></th>
+      <th></th>
+    </tr>
+    <tr>
+      <td>16.กลุ่มงานบริหารทั่วไป</td>
+      <th></th>
+      <th></th>
+    </tr>
+    <tr>
+      <td>17.กลุ่มงานทันตแพทย์</td>
+      <th></th>
+      <th></th>
+    </tr>
+    <tr>
+     <td>18.กลุ่มงานเภสัชกรรม</td>
+      <td><i class="fa fa-check-square-o" style="font-size:20px;color:rgb(49, 204, 11)"></i></td>
+      <td><i class="fa fa-times-circle-o" style="font-size:20px;color:red"></i></td>
+    </tr>
+    <tr>
+      <td>19.กลุ่มการพยาบาล</td>
+      <td><i class="fa fa-check-square-o" style="font-size:20px;color:rgb(49, 204, 11)"></i></td>
+      <td><i class="fa fa-check-square-o" style="font-size:20px;color:rgb(49, 204, 11)"></i></td>
+    </tr>
+    <tr>
+      <td>20.กลุ่มงานประกันสุขภาพยุทธศาสตร์และสารสนเทศมทางการแพทย์</td>
+      <th></th>
+      <th></th>
+    </tr>
+    <tr>
+      <td>21.กลุ่มงานเวชปฏิบัติครอบครัวและชุมชน</td>
+      <th></th>
+      <th></th>
+    </tr>
+    <tr>
+      <td>22.ตัวชี้วัดตอนที่ 4</td>
+      <th></th>
+      <th></th>
+    </tr>
+    <tr>
+       <td>23.ตัวชี้วัดผู้อำนวยการ</td>
+      <th></th>
+      <th></th>
+    </tr>
+    <tr>
+      <td>24.ตัวชี้วัดกระทรวง</td>
+      <th></th>
+      <th></th>
+    </tr>
+    <tr>
+      <td>25.กลุ่มงานกายภาพบำบัด</td>
+      <th></th>
+      <th></th>
+    </tr>
+    <tr>
+      <td>26.งานโภชนาการ</td>
+      <th></th>
+      <th></th>
+    </tr>
+    <tr>
+      <td>27.งานซักฟอก</td>
+      <td><i class="fa fa-check-square-o" style="font-size:20px;color:rgb(49, 204, 11)"></i></td>
+      <td><i class="fa fa-check-square-o" style="font-size:20px;color:rgb(49, 204, 11)"></i></td>
+    </tr>
+    <tr>
+      <td>28.งานหน่วยจ่ายซัพพลาย</td>
+      <td><i class="fa fa-check-square-o" style="font-size:20px;color:green"></i></td>
+      <td><i class="fa fa-times-circle-o" style="font-size:20px;color:red"></i></td>
+    </tr>
+  </table>
+</div>
+
+<!-- ซ่อน city อื่นไว้ -->
+<div id="2" class="w3-container city" style="display:none"></div>
+<div id="3" class="w3-container city" style="display:none"></div>
+<div id="4" class="w3-container city" style="display:none"></div>
+<div id="5" class="w3-container city" style="display:none"></div>
+
+<script>
+function openCity(cityName) {
+  var i;
+  var x = document.getElementsByClassName("city");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  document.getElementById(cityName).style.display = "block";  
+}
+</script>
+
+</body>
+</html>
